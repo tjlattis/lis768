@@ -6,7 +6,7 @@ import io
 
 path=os.path.dirname(os.path.abspath(__file__))
 
-path +='/dissertations/1927-0013-Wall.pdf'
+path +='/1927-0013-Wall.pdf'
 # # path='asdf.txt'
 # #
 pytesseract.pytesseract.tesseract_cmd = '/usr/local/bin/tesseract'
@@ -25,7 +25,7 @@ for img in req_image:
     txt = pytesseract.image_to_string(PI.open(io.BytesIO(img)))
     final_text.append(txt)
 
-print(len(final_text))
+print(final_text)
 
 #now lets convert the PDF to Image
     #this is good resolution As far as I know
